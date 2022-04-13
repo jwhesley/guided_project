@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../acess/css/style.css"/>
-    <link rel="stylesheet" href="../acess/css/form.css"/>
+    <link rel="stylesheet" href="../acess/css/form.css  "/>
     <title>Guided project</title>
 </head>
 <body>
@@ -16,6 +16,26 @@
         <a href="../index.html">Listing</a>
         <a href="../Guided_Project/src/form.html">Register</a>
     </div>
-    My Form
+    <section>
+        <form class="form">
+            <div>
+                <label class="big-label" for="name">Name:</label>
+                <input name="name" id="name" required type="text"/>
+            </div>
+            <div>
+                <label class="big-label for="phone">Phone number</label>
+                <input name="phone" id="phone" required type="text"/>
+            </div>
+            <div>
+                <label class="big-label">Previous Experience:</label>
+                    <div>
+                        <input type="radio" name="xp" id="xp-yes" /> <label for="xp-yes">Yes</label>
+                        </br>
+                        <input type="radio" name="xp" id="xp-no" /> <label for="xp-no">No</label>
+                    </div>
+            </div>
+                <input type="submit" value="Save" />
+        </form>
+    </section>
 </body>
 </html>

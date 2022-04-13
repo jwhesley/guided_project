@@ -1,0 +1,16 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form div{
+    width: 100%;
+}
+
+.form .big-label{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
