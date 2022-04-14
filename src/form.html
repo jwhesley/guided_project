@@ -18,21 +18,20 @@
     </div>
     <section>
         <form class="form">
-            <div>
+            <div class="line-form">
                 <label class="big-label" for="name">Name:</label>
                 <input name="name" id="name" required type="text"/>
             </div>
-            <div>
+            <div class="line-form">
                 <label class="big-label for="phone">Phone number</label>
                 <input name="phone" id="phone" required type="text"/>
             </div>
-            <div>
+            <div class="line-form xp-line" style="display: flex;">
                 <label class="big-label">Previous Experience:</label>
-                    <div>
-                        <input type="radio" name="xp" id="xp-yes" /> <label for="xp-yes">Yes</label>
-                        </br>
-                        <input type="radio" name="xp" id="xp-no" /> <label for="xp-no">No</label>
-                    </div>
+                <div> 
+                <input type="radio" name="xp" id="xp-yes" /> <label for="xp-yes">Yes</label>
+                <input type="radio" name="xp" id="xp-no" /> <label for="xp-no">No</label>
+            </div>
             </div>
                 <input type="submit" value="Save" />
         </form>
