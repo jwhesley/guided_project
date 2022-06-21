@@ -1,27 +1,31 @@
-function desenhaTabela(){
-    var people = [{
-            name: 'Josivan Whesley',
-            tel: '84 99999999',
-            xp: true,
-        },
-        {
-            name: 'Edvania Pereira',
-            tel: '84 99991999',
-            xp: true,
-        },
-        {
-            name: 'João Arthur',
-            tel: '84 99999999',
-            xp: true,
-        },
-        {
-            name: 'Juliane Silva',
-            tel: '84 92229999',
-            xp: false,
-        },
-    ]
+var people = [{
+    name: 'Josivan Whesley',
+    tel: '84 99999999',
+    xp: true,
+},
+{
+    name: 'Edvania Pereira',
+    tel: '84 99991999',
+    xp: true,
+},
+{
+    name: 'João Arthur',
+    tel: '84 99999999',
+    xp: true,
+},
+{
+    name: 'Juliane Silva',
+    tel: '84 92229999',
+    xp: false,
+},
+];
 
-    document.querySelectorAll('table.list tbody .dinamic-content')
+function desenhaTabela(){
+    
+    currentLines = [...document.querySelectorAll('table.list tbody .dinamic-content')];
+    currentLines.forEach((element) => {
+        element.remove()
+    })
     //person é o indice do array é apenas um número
     //people vai ser o objeto
     for (person in people) {
@@ -33,7 +37,7 @@ function desenhaTabela(){
         <td> ${people[person].tel }</td>
         <td> ${ (people[person].xp ? '<strong style="color:green"> Sim </strong>' : '<strong style="color:red"> Não </strong>' )}</td>
         <td>
-            <button onclick="people.splice(${person}, 1)"> Excluir </button>
+            <button onclick="people.splice(${person}, 1); desenhaTabela()"> Excluir </button>
         </td>
         
         </tr>`
