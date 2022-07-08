@@ -3,7 +3,7 @@ function testaFormulario(eventos){
 
     var peopleRaw = localStorage.getItem('people')
 if(peopleRaw != null) {
-    var people = JSON.parse(peopleRaw)
+    var people = JSON.stringify(peopleRaw)
 } else{
     var people = [];
 }
@@ -13,6 +13,7 @@ if(peopleRaw != null) {
         xp: (eventos.target.elements['xp'].value == true)
 
     })
-    localStorage.setItem('people', Json.stringify(people))
-    document.getElementById('goHome').click()
+    localStorage.setItem('people', JSON.stringify(people))
+
+    document.getElementById('goHome').click();
 }
