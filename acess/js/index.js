@@ -24,10 +24,16 @@ function desenhaTabela(){
                 ${(people[person].xp ? '<strong style="color: green"> Sim </strong>' : '<strong style="color: red"> Não </strong>')}
             </td>
             <td>
-            <button onclick="people.splice(${person},1); desenhaTabela();">Exlcuir</button>
+            <button onclick="deleteUser(${person})">Exlcuir</button>
             </td>
         </tr>` 
 
     }
+}
+//essa função é para o botão de deletar e amarzenar no localStorage
+function deleteUser(p){
+    people.splice(p, 1);
+    desenhaTabela();
+    localStorage.setItem('people', JSON.stringify(people))
 }
 desenhaTabela()
