@@ -1,14 +1,14 @@
-.list{
+.lista{
     width: 100%;
     border-spacing: 0px;
 }
 
-.list tr:nth-child(1) {
+.lista tr:nth-child(1) {
     vertical-align: top;
     background-color: black;
     color: white;
 }
 
-.list tr td{
+.lista tr td{
     padding: 5px;
 }
