@@ -70,7 +70,20 @@ function testaCampoTelefone(e){
     e.preventDefault()
     console.log(e)
 
-    if((/[0-9 -()]/g).test(e.key)){
+    //colocar mascara de parentes () nos campos, cod abaixo
+
+    if(e.target.value.length == 0) {
+        e.target.value += '('
+    }
+    if(e.target.value.length == 3) {
+        e.target.value += ')'
+    }
+    if(e.target.value.length == 9) {
+        e.target.value += '-'
+    }
+
+
+    if((/[0-9 -()]/g).test(e.key) && e.target.value.length < 15){
         e.target.value += e.key
     }
     
