@@ -7,16 +7,19 @@ function testaFormulario(e){
     //     return false
     //   }
     // }
-    // if(e.target.elements['phone'].value.length < 11){
-    //     alert('Número invalido')
-    //     return false
-    // }
+    
 //fim do teste feito acima
 
 //teste mais simples com expressão regular
-    var temLetras = e.target.elements['phone'].value.match(/[a-zA-Z]/g)
-    if (temLetras && temLetras.length ){
+    var phonePattern = /[^0-9-() ]+/g
+    if(phonePattern.test(e.target.elements['phone'].value)){
         alert('Apenas números são permitidos no campo telefone!')
+        return false
+    }
+
+
+    if(e.target.elements['phone'].value.replace(/[-() ]/g, '').length < 11){
+        alert('Número invalido')
         return false
     }
 
