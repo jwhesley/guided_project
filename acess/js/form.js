@@ -65,5 +65,13 @@ if (id !== null){
         document.getElementById('xp-no').checked = true
     }
 }
+//aplicando mascara no telefone, tem que colocar o evento onkeypress no html
+function testaCampoTelefone(e){
+    e.preventDefault()
+    console.log(e)
 
-
+    if((/[0-9 -()]/g).test(e.key)){
+        e.target.value += e.key
+    }
+    
+}
